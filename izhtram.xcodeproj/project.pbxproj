@@ -26,6 +26,8 @@
 		740AAA10173659E200AD326D /* marker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 740AAA0F173659E200AD326D /* marker@2x.png */; };
 		740AAA131736D6F600AD326D /* stops.json in Resources */ = {isa = PBXBuildFile; fileRef = 740AAA121736D6F600AD326D /* stops.json */; };
 		740AAA151736D72A00AD326D /* routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 740AAA141736D72A00AD326D /* routes.json */; };
+		74A999F41737FD3F002D30BF /* marker_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A999F31737FD3F002D30BF /* marker_selected@2x.png */; };
+		74A999FA1738309E002D30BF /* galmiSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A999F91738309E002D30BF /* galmiSearchField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,9 @@
 		740AAA0F173659E200AD326D /* marker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "marker@2x.png"; path = "izhtram/marker@2x.png"; sourceTree = "<group>"; };
 		740AAA121736D6F600AD326D /* stops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stops.json; path = izhtram/data/stops.json; sourceTree = "<group>"; };
 		740AAA141736D72A00AD326D /* routes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = routes.json; path = izhtram/data/routes.json; sourceTree = "<group>"; };
+		74A999F31737FD3F002D30BF /* marker_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "marker_selected@2x.png"; path = "izhtram/marker_selected@2x.png"; sourceTree = "<group>"; };
+		74A999F81738309E002D30BF /* galmiSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = galmiSearchField.h; sourceTree = "<group>"; };
+		74A999F91738309E002D30BF /* galmiSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = galmiSearchField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,8 @@
 				74089C951734F25400A0E750 /* Supporting Files */,
 				740AAA0917364EBE00AD326D /* galmiMapViewAnnotation.h */,
 				740AAA0A17364EBE00AD326D /* galmiMapViewAnnotation.m */,
+				74A999F81738309E002D30BF /* galmiSearchField.h */,
+				74A999F91738309E002D30BF /* galmiSearchField.m */,
 			);
 			path = izhtram;
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 		740AAA0C1736539900AD326D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				74A999F31737FD3F002D30BF /* marker_selected@2x.png */,
 				740AAA0F173659E200AD326D /* marker@2x.png */,
 				740AAA0D173653B900AD326D /* pin_marker@2x.png */,
 			);
@@ -213,6 +221,7 @@
 				740AAA10173659E200AD326D /* marker@2x.png in Resources */,
 				740AAA131736D6F600AD326D /* stops.json in Resources */,
 				740AAA151736D72A00AD326D /* routes.json in Resources */,
+				74A999F41737FD3F002D30BF /* marker_selected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +236,7 @@
 				74089C9F1734F25400A0E750 /* galmiAppDelegate.m in Sources */,
 				74089CAE1734F25400A0E750 /* galmiViewController.m in Sources */,
 				740AAA0B17364EBE00AD326D /* galmiMapViewAnnotation.m in Sources */,
+				74A999FA1738309E002D30BF /* galmiSearchField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

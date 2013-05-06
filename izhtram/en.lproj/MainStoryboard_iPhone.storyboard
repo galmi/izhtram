@@ -20,23 +20,30 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuF-OV-7cW">
                                 <items>
                                     <barButtonItem style="plain" id="BpO-73-tT0">
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Откуда" minimumFontSize="17" id="tTY-Jk-8c4">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Откуда" minimumFontSize="17" id="tTY-Jk-8c4" customClass="galmiSearchField">
                                             <rect key="frame" x="12" y="7" width="142" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <accessibility key="accessibilityConfiguration" hint="" label="">
-                                                <bool key="isElement" value="YES"/>
+                                                <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                                <bool key="isElement" value="NO"/>
                                             </accessibility>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            <connections>
+                                                <action selector="didBeginEditing:" destination="2" eventType="editingDidBegin" id="p9N-Px-Jqt"/>
+                                                <action selector="didEndEditing:" destination="2" eventType="editingDidEnd" id="L8e-iv-ze3"/>
+                                            </connections>
                                         </textField>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="1Nm-NH-tZ4">
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Куда" minimumFontSize="17" id="LGM-xB-whd">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Куда" minimumFontSize="17" id="LGM-xB-whd" customClass="galmiSearchField">
                                             <rect key="frame" x="164" y="7" width="142" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
+                                                <action selector="didBeginEditing:" destination="2" eventType="editingDidBegin" id="yS9-pv-B5b"/>
+                                                <action selector="didEndEditing:" destination="2" eventType="editingDidEnd" id="hUw-M3-ihc"/>
                                                 <outlet property="delegate" destination="2" id="hgg-BL-an6"/>
                                             </connections>
                                         </textField>
@@ -69,12 +76,19 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="galmiSearchField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/galmiSearchField.h"/>
+        </class>
         <class className="galmiViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/galmiViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="fromField" candidateClass="UITextField"/>
+                <relationship kind="action" name="didBeginEditing:"/>
+                <relationship kind="action" name="didEndEditing:"/>
+                <relationship kind="action" name="fromButtonClick:"/>
+                <relationship kind="action" name="tillButtonClick:"/>
+                <relationship kind="outlet" name="fromField" candidateClass="galmiSearchField"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="tillField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tillField" candidateClass="galmiSearchField"/>
             </relationships>
         </class>
     </classes>
