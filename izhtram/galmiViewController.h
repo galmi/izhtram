@@ -22,10 +22,20 @@
     galmiSearchField    *_tillField;
 
     NSMutableDictionary *points;        //все точки из JSON файла
+    NSMutableArray      *routes;        //данные  маршрутах
+    NSMutableDictionary *neighbors;     //соседи
     NSArray             *activeRoutes;  //активные маршруты
     NSMutableArray      *activePoints;  //активные точки на карте
     NSMutableDictionary *searchStops;         //остановки для поиска
+    NSMutableArray      *openSet;
+    NSMutableArray      *closedSet;
+    NSMutableDictionary *pathPoints;    //все точки для построения пути
     int from_id, till_id;
+    NSDictionary *fromPoint;
+    NSDictionary *toPoint;
+    
+    NSMutableArray *overlay1;
+    id overlay2;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
